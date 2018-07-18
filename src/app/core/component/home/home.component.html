@@ -1,0 +1,24 @@
+<div id="Container" >
+
+<tr>
+  <div id="tooltipLeft">
+    <tr>
+        <div matTooltipPosition="above"  (mousemove)="showRight=false" *ngIf="showLeft"  [matTooltipDisabled]="!showLeft" matTooltip="{{tooltipText}}" #tooltip="matTooltip">            
+        </div>
+    </tr>
+    <tr>
+        <button id="buttonLeft" mat-raised-button color="primary"  (click)="showLeftTooltip()"> Left </button>
+    </tr>
+  </div>
+  <div id="tooltipRight">
+      <tr>
+          <div matTooltipPosition="above" (mousemove)="showLeft=false" *ngIf="showRight" [matTooltipDisabled]="!showRight" matTooltip="{{tooltipText}}" #tooltip="matTooltip">
+          </div>
+      </tr>
+      <tr>
+          <button id="buttonRight" mat-raised-button color="primary"  (click)="showRightTooltip()"> Right </button> 
+      </tr>
+  </div>
+</tr>   
+  
+</div>
